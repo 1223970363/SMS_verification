@@ -1,5 +1,7 @@
 package com.bjf.sms.servlet;
 
+import com.google.gson.Gson;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,11 +20,13 @@ public class RegisterServlet extends HttpServlet {
         Object num=session.getAttribute("Num");
 
         if(Code.equals(num)) {
-            System.out.println("注册成功");
-            request.getRequestDispatcher("Success.jsp").forward(request,response);
+            Gson gson=new Gson();
+            String jsonStr=gson.toJson("1");
+            response.getWriter().print(jsonStr);
         }else{
-            System.out.println("注册失败");
-            request.getRequestDispatcher("fail.jsp").forward(request,response);
+            Gson gson=new Gson();
+            String jsonStr=gson.toJson("0");
+            response.getWriter().print(jsonStr);
         }
     }
 

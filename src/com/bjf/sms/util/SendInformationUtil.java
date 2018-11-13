@@ -28,12 +28,12 @@ public class SendInformationUtil {
         smsText=Phone+head+numstr+tail;
         System.out.println(smsText);
         //UTF发送
-//        int result = client.sendMsgUtf8(Uid, Key, smsText, smsMob);
-//        if(result>0){
-//            System.out.println("UTF8成功发送条数=="+result);
-//        }else{
-//            System.out.println(client.getErrorMsg(result));
-//        }
+        int result = client.sendMsgUtf8(Uid, Key, smsText, smsMob);
+        if(result>0){
+            System.out.println("UTF8成功发送条数=="+result);
+        }else{
+            System.out.println(client.getErrorMsg(result));
+        }
         return numstr;
     }
 }

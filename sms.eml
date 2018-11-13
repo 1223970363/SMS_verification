@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/sms"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="Tomcat 7.0.90" scope="PROVIDED"/>
+	<lib name="commons-logging-1.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.2.jar!/"/>
+	</lib>
+	<lib name="httpcore-4.4.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/httpcore-4.4.1.jar!/"/>
+	</lib>
+	<lib name="httpclient-4.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/httpclient-4.5.jar!/"/>
+	</lib>
+	<lib name="gson-2.7.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/web/WEB-INF/lib/gson-2.7.jar!/"/>
+	</lib>
+	<levels>
+		<level name="Tomcat 7.0.90" value="application_server_libraries"/>
+	</levels>
+</component>

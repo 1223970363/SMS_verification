@@ -15,7 +15,7 @@
     <h5>手机：<input type="text" id="Phone"></h5>
     <h5>密码：<input type="password" id="password"></h5>
     <div><input type="text" id="Code"><input type="button" onclick="submit()" value="获取验证码"></div>
-    <input type="button" onclick="register()" value="注册">
+    <input type="button" id="register" value="注册">
   </div>
   </body>
 </html>
@@ -29,7 +29,7 @@ function submit() {
         data: {"Phone":$("#Phone").val(),}
     })
 }
-function register() {
+$("#register").click(function () {
     $.ajax({
         type:"post",
         url:"RegisterServlet",
@@ -38,8 +38,17 @@ function register() {
             "Phone":$("#Phone").val(),
             "password":$("#password").val(),
             "Code":$("#Code").val(),
+        },
+        success:function (Data) {
+            var num=Data;
+           console.log(num);
+           if(num=="1"){
+               window.location.href = "http://localhost:8080/Success.jsp";
+           }else{
+               window.location.href = "http://localhost:8080/fail.jsp";
+           }
         }
     })
-}
+});
 
 </script>
